@@ -1,0 +1,1636 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="resources/reset.css">
+<link rel="stylesheet" href="resources/build.css">
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<title>Infinite Yield</title>
+<meta name="description" content="Infinite Yield documentation and arguements"/>
+<meta name="keywords" content="infinite yield, roblox, admin, commands, script, fe, fd, filtering enabled, filtering disabled"/>
+<link href="resources/Logo_Transparent.png" rel="shortcut icon" type="image/x-icon"/>
+<link href="resources/Logo_Transparent.png" rel="icon" type="image/x-icon"/>
+<style type="text/css" id="styleCSS">
+    /*
+    Some Style Themes enhanced with background textures provided by http://subtlepatterns.com/
+*/
+body {
+    	background-color: #171716;
+
+    
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: top left;
+    background-size: auto;
+}
+
+/* IOS devices 'bgd-att: fixed' solution */
+@media only screen and (max-device-width: 1366px) {
+    .bgd-attachment-fixed {
+        background-image: none;
+    }
+    .bgd-attachment-fixed:after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        
+        background-repeat: repeat;
+        background-position: top left;
+        background-size: auto;
+        z-index: -2;
+    }
+}
+
+.Text_2_Default,
+.yola_heading_container {
+  word-wrap: break-word;
+}
+
+.yola_bg_overlay {
+    display:table;
+    table-layout: fixed;
+    position:absolute;
+    min-height: 100%;
+    min-width: 100%;
+    width:100%;
+    height:100%;
+}
+.yola_outer_content_wrapper {
+    
+    padding-right: 0rem;
+    padding-bottom: 2.5rem;
+    padding-left: 0rem;
+}
+.yola_inner_bg_overlay {
+    width:100%;
+    min-height: 100vh;
+    display: table-cell;
+    
+    vertical-align: top;
+}
+.yola_outer_heading_wrap {
+    width:100%;
+    text-align: center;
+}
+.yola_heading_container {
+    margin: 0 auto;
+    max-width: 1280px;
+    
+}
+.yola_inner_heading_wrap {
+    margin: 0 auto;
+    
+}
+.yola_innermost_heading_wrap {
+    padding-left:0;
+    padding-right:0;
+    margin: 0 auto;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+.yola_inner_heading_wrap.top nav,
+.yola_inner_heading_wrap.top div#yola_heading_block,
+.yola_inner_heading_wrap.bottom nav,
+.yola_inner_heading_wrap.bottom div#yola_heading_block {
+    padding-left: 9.4rem;
+    padding-right: 9.4rem;
+}
+.yola_inner_heading_wrap.left .yola_innermost_heading_wrap,
+.yola_inner_heading_wrap.right .yola_innermost_heading_wrap {
+    padding-left: 9.4rem;
+    padding-right: 9.4rem;
+}
+.yola_inner_heading_wrap h1 {
+    margin: 0;
+}
+#yola_nav_block {
+    height: 100%;
+}
+#yola_nav_block nav {
+    text-align: center;
+    
+}
+#yola_nav_block nav ul{
+    display:inline;
+}
+.yola_inner_heading_wrap.left #yola_heading_block {
+    float:left;
+}
+.yola_inner_heading_wrap.right #yola_heading_block {
+    float:right;
+}
+.yola_inner_heading_wrap.top #yola_nav_block {
+    padding:1.1rem 0 0 0;
+}
+.yola_inner_heading_wrap.right #yola_nav_block {
+    float:left;
+    padding:1.1rem 0 0 0;
+}
+.yola_inner_heading_wrap.bottom #yola_nav_block {
+    padding:0 0 1.1rem 0;
+}
+.yola_inner_heading_wrap.left #yola_nav_block {
+    float:right;
+    padding:1.1rem 0 0 0;
+}
+.yola_banner_wrap {
+    background-attachment: scroll;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1280px;
+    display: none;
+    background-position: center center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-image: url(resources/Logo_Transparent.png);
+    
+}
+.yola_inner_banner_wrap {
+    padding-left:0;
+    padding-right:0;
+    padding-top: 16.9rem;
+    padding-bottom: 16.9rem;
+    
+}
+.yola_innermost_banner_wrap {
+    margin: 0 auto;
+    
+}
+.yola_inner_nav_wrap {
+    margin: 0 auto;
+    max-width: 1280px;
+}
+.yola_banner_wrap nav ul.sys_navigation {
+    text-align: center;
+    padding-top:1.1rem;
+    padding-bottom:1.1rem;
+}
+.yola_banner_wrap h1 {
+    margin:0;
+    text-align: center;
+}
+.yola_site_tagline {
+    padding-top:0;
+    padding-bottom:0;
+    font-family: 'Montserrat';
+    font-size: 3.1rem;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 2px;
+    line-height: 1.5em;
+    text-transform: uppercase;
+    text-align: left;
+    padding-right: 9.4rem;
+    padding-left: 9.4rem;
+
+}
+.yola_site_tagline span {
+    display: inline-block;
+    
+    
+    
+    
+    
+}
+ul.sys_navigation {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+ul.sys_navigation li {
+    display: inline;
+    list-style: none;
+    margin:0 40px 0 0;
+}
+.yola_inner_heading_wrap ul.sys_navigation li:last-child {
+    margin:0;
+}
+ul.sys_navigation li a{
+    text-decoration: none;
+}
+
+div.ys_submenu {
+    margin-top: 8px;
+}
+
+.yola_content_wrap {
+    margin:0 auto;
+    max-width: 1280px;
+    	background-color: #171716;
+
+}
+.yola_content_column {
+    margin:0 auto;
+    max-width: 1060px;
+}
+
+.yola_inner_content_column {
+    margin:0 auto;
+
+    padding-top: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 3rem;
+}
+.yola_inner_footer_wrap {
+    padding: 0 20px;
+}
+div[id*='sys_region_'] {
+    padding-left: 0 ! important;
+    padding-right: 0 ! important;
+}
+.yola_site_logo {
+    
+    max-width:100%;
+}
+#sys_heading.yola_hide_logo img {
+    display:none;
+}
+#sys_heading.yola_hide_logo span {
+    display:inline;
+}
+a#sys_heading.yola_show_logo {
+    font-size:14px;
+}
+#sys_heading.yola_show_logo img {
+    display:inline;
+}
+#sys_heading.yola_show_logo span {
+    display:none;
+}
+.yola_footer_wrap {
+    margin:0 auto;
+    max-width: 1280px;
+    
+}
+.yola_footer_column {
+    margin:0 auto;
+    max-width: 1060px;
+    display: none;
+}
+footer {
+    padding-top: 2.5rem;
+    padding-right: 3.8rem;
+    padding-bottom: 2.5rem;
+    padding-left: 3.8rem;
+    font-family: 'Lato';
+    font-size: 1rem;
+    color: #7a7a7a;
+    line-height: 1.5em;
+    
+    text-transform: none;
+
+}
+span.yola_footer_socialbuttons {
+    display:inline-block;
+    line-height:0;
+    margin:0;
+    padding:0;
+    display:inline-block;
+    position:static;
+    float:left;
+    width:146px;
+    height:20px;
+    display: none;
+}
+.sys_yola_form .submit,
+.sys_yola_form input.text,
+.sys_yola_form input.email,
+.sys_yola_form input.tel,
+.sys_yola_form input.url,
+.sys_yola_form textarea {
+    font-family: 'Open Sans';
+    font-size: 1rem;
+    line-height: 1.5em;
+    
+    text-transform: none;
+}
+div.sys_yola_form {
+    padding:0 !important;
+}
+div.sys_yola_form form {
+    margin:0 !important;
+    padding:0 !important;
+}
+.sys_layout h2, .sys_txt h2, .sys_layout h3, .sys_txt h3, .sys_layout h4, .sys_txt h4, .sys_layout h5, .sys_txt h5, .sys_layout h6, .sys_txt h6, .sys_layout p, .sys_txt p {
+    margin-top:0;
+}
+div[id*='sys_region_'] {
+    padding:0 !important;
+}
+.sys_layout blockquote {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  padding-left: 15px;
+  border-left: 3px solid #797979;;
+  
+  font-style: italic;
+  
+  
+  
+  
+  
+}
+.sys_layout blockquote,
+.sys_layout blockquote h1,
+.sys_layout blockquote h2,
+.sys_layout blockquote h3,
+.sys_layout blockquote h4,
+.sys_layout blockquote h5,
+.sys_layout blockquote h6,
+.sys_layout blockquote p {
+    
+}
+.sys_layout p,.sys_layout pre {margin:0 0 1.5em 0}
+.sys_layout h2,.sys_layout h3,.sys_layout h4,.sys_layout h5,.sys_layout h6 { margin:0 0 0.5em 0 }
+.sys_layout dl, .sys_layout menu,.sys_layout ol,.sys_layout ul{margin:0 0 1.5em 0}
+
+.mob_menu {
+    display: none;
+}
+
+.new-text-widget img, .old_text_widget img {
+    max-width: 100%;
+}
+
+
+@media only screen and (max-width : 736px) {
+    html {
+        font-size: 80%;
+    }
+
+    body .m_inherit_width {
+        width: inherit;
+    }
+
+    .small_device_hide {
+        opacity: 0;
+    }
+
+    /* Remove display table so that fixefox can understand max-width */
+    .yola_bg_overlay, .yola_inner_bg_overlay {
+       display: block;
+    }
+
+    /* Zero out padding of the heading wrapper */
+    .yola_inner_heading_wrap.top .yola_innermost_heading_wrap,
+    .yola_inner_heading_wrap.bottom .yola_innermost_heading_wrap,
+    .yola_inner_heading_wrap.left .yola_innermost_heading_wrap,
+    .yola_inner_heading_wrap.right .yola_innermost_heading_wrap {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Make all image widgets center aligned */
+    .Image_Default img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Center button widgets in column dividers */
+    .column_divider .sys_button {
+        text-align: center;
+    }
+
+    /* Make column dividers snap to one over another */
+    .yola_inner_heading_wrap.left #yola_heading_block, .yola_inner_heading_wrap.right #yola_heading_block {
+        float: none;
+    }
+
+    #sys_heading {
+        word-wrap: break-word;
+        word-break: break-word;
+    }
+
+    body .column_divider .left, body .column_divider .right {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .mob_menu a:visited {
+        color: #fff;
+    }
+
+    .mob_menu {
+        display: block;
+        z-index: 1;
+        background: #171716;;
+        ;
+        ;
+    }
+
+    .mob_menu.menu_open {
+        position: absolute;
+        min-height: 100%;
+        padding: 1rem 0 0 0;
+        margin: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .yola_outer_content_wrapper {
+        display: block;
+        padding-top: 0;
+    }
+
+    .mob_menu_overlay {
+        display: none;
+        text-transform: uppercase;
+    }
+
+    .menu_open .mob_menu_overlay  {
+        display: block;
+    }
+
+    .mob_menu_toggle {
+        display: block;
+        padding-top: 5%;
+        padding-bottom: 6%;
+        text-align: center;
+        color: #666;
+        cursor: pointer;
+    }
+    .mob_submenu_toggle {
+        list-style: none;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .new-text-widget img, .old_text_widget img {
+        height: auto;
+    }
+
+    #sys_heading span {
+        font-size: 35px;
+        font-weight: 500;
+    }
+    .sys_navigation {
+        display: none;
+    }
+
+    .mobile_ham {
+        stroke: #5c5c5c;
+    }
+
+    .mobile_quit {
+        display: none;
+    }
+
+    .menu_open .mobile_ham {
+        display: none;
+    }
+
+    .menu_open .mobile_quit {
+        display: inline;
+        stroke: #5c5c5c;
+    }
+
+    .mob_menu_list {
+        font-family: 'Montserrat';
+        font-weight: lighter;
+        margin: 0;
+        font-size: 2.2em;
+        line-height: 2;
+        letter-spacing: 0.1em;
+        list-style: none;
+        text-align: center;
+        padding: 0;
+        -webkit-animation-duration: .2s;
+        -webkit-animation-fill-mode: both;
+        -webkit-animation-name: fadeInUp;
+        -moz-animation-duration: .2s;
+        -moz-animation-fill-mode: both;
+        -moz-animation-name: fadeInUp;
+        -o-animation-duration: .2s;
+        -o-animation-fill-mode: both;
+        -o-animation-name: fadeInUp;
+        animation-duration: .2s;
+        animation-fill-mode: both;
+        animation-name: fadeInUp;
+    }
+
+    .mob_menu_overlay .mob_menu_list a {
+        color: #5c5c5c;
+    }
+
+    .mob_more_toggle {
+        display: inline-block;
+        cursor: pointer;
+        background: none;
+        border: none;
+        outline: none;
+        margin-left: 8px;
+        stroke: #5c5c5c;
+    }
+
+    .up_arrow {
+        display: none;
+    }
+
+    .sub_menu_open svg .down_arrow {
+        display: none;
+    }
+
+    .sub_menu_open .up_arrow {
+        display: inline;
+    }
+
+    .mob_menu_overlay .mob_menu_list .selected a {
+        color: #ffffff;
+    }
+
+    .sub_menu_open a {
+        color: #ffffff;
+    }
+
+    .mob_menu_list .sub_menu_open a {
+        color: #ffffff;
+    }
+
+    .sub_menu_open .mob_more_toggle {
+        stroke: #ffffff;
+    }
+
+    .mob_submenu_list {
+        font-family: 'Montserrat';
+        font-weight: lighter;
+        list-style: none;
+        text-align: center;
+        padding: 0 0 5% 0;
+        margin: 0;
+        line-height: 1.6;
+        display: none;
+        -webkit-animation-duration: .2s;
+        -webkit-animation-fill-mode: both;
+        -webkit-animation-name: fadeInUp;
+        -moz-animation-duration: .2s;
+        -moz-animation-fill-mode: both;
+        -moz-animation-name: fadeInUp;
+        -o-animation-duration: .2s;
+        -o-animation-fill-mode: both;
+        -o-animation-name: fadeInUp;
+        animation-duration: .2s;
+        animation-fill-mode: both
+        animation-name: fadeInUp;
+    }
+
+    .sub_menu_open .mob_submenu_list{
+        display: block;
+    }
+
+    .mob_submenu_items {
+        font-size: 0.75em;
+    }
+    .mob_menu_list .mob_nav_selected {
+        color: #ffffff;
+    }
+
+    .menu_open ~ .yola_outer_content_wrapper {
+        display: none;
+    }
+
+    @-webkit-keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+      }
+      100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+      }
+    }
+
+    @-moz-keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        -moz-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+      }
+      100% {
+        opacity: 1;
+        -moz-transform: none;
+        transform: none;
+      }
+    }
+
+    @-o-keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        -o-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+      }
+      100% {
+        opacity: 1;
+        -o-transform: none;
+        transform: none;
+      }
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+      }
+      100% {
+        opacity: 1;
+        transform: none;
+      }
+    }
+}
+
+
+  </style>
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.2/webfont.js" type="text/javascript"></script>
+<style type="text/css">
+      @import url("https://fonts.googleapis.com/css?family=Montserrat%3Aregular|Lato%3Aregular|Open+Sans%3Aregular&subset=latin,latin-ext");
+    </style>
+<style type="text/css" id="styleOverrides">
+    /* ======================
+*
+*  Site Style Settings
+*
+=========================*/
+/* Paragraph text (p) */
+
+.content p, #content p, .HTML_Default p, .Text_Default p, .sys_txt p, .sys_txt a, .sys_layout p, .sys_txt, .sys_layout  {
+    font-family: 'Open Sans';
+    font-weight: 'regular';
+    font-size: 1rem;
+    color: #797979;
+    line-height: 1.5em;
+    
+    text-transform: none;
+}
+
+/* Navigation */
+.sys_navigation a, .ys_menu_2, div#menu ul, div#menu ul li a, ul.sys_navigation li a, div.sys_navigation ul li.selected a, div.sys_navigation ul li a, #navigation li a, div.ys_menu ul a:link, div.ys_menu ul a:visited, div.ys_nav ul li a, #sys_banner ul li a {
+    font-family: 'Montserrat';
+    
+    font-size: 0.9rem;
+    color: #5c5c5c;
+    text-decoration: none;
+    letter-spacing: 1px;
+    line-height: 1.5em;
+    text-transform: uppercase;
+}
+
+
+/* Navigation:selected */
+div.sys_navigation ul li.selected a, div#menu ul li.selected a, #navigation li.selected a, div.ys_menu ul li.selected a:link, div.ys_menu ul li.selected a:visited, div.ys_nav ul li.selected a, #sys_banner ul li.selected a {
+    color: #ffffff;
+}
+
+/* Navigation:hover */
+div.sys_navigation ul li a:hover, div#menu ul li a:hover, #navigation li a:hover, div.ys_menu ul a:hover, div.ys_nav ul li a:hover, div.ys_menu ul li a:hover, #sys_banner ul li a:hover {
+    color: #969696;
+}
+
+/* Site Title */
+#sys_heading, a#sys_heading, #sys_banner h1 a, #header h1 a, div#heading h1 a {
+    font-family: 'Lato';
+    
+    font-size: 2.2rem;
+    color: #5c5c5c;
+    text-decoration: none;
+    letter-spacing: 1px;
+    line-height: 1.5em;
+    text-transform: uppercase;
+}
+
+/* Hyperlinks (a, a:hover, a:visited) */
+a, .sys_txt a:link, .sys_layout a:link {color: #5c5c5c;}
+a, .sys_txt a:link, .sys_layout a:link {text-decoration: none;}
+a:visited, .sys_txt a:visited, .sys_layout a:visited {color: #5c5c5c;}
+a:hover, .sys_txt a:hover, .sys_layout a:hover {color: #797979;}
+a:hover, .sys_txt a:hover, .sys_layout a:hover {text-decoration: underline;}
+
+/* Headings (h2, h3, h4, h5, h6) */
+.sys_layout h2, .sys_txt h2 {
+    font-family: 'Montserrat';
+    font-weight: 'regular';
+    font-size: 1.9rem;
+    color: #5c5c5c;
+    text-decoration: none;
+    letter-spacing: 1px;
+    line-height: 1.5em;
+    text-transform: none;
+}
+
+.sys_layout h2 a, .sys_layout h2 a:link, .sys_layout h2 a:hover, .sys_layout h2 a:visited {
+    font-family: 'Montserrat';
+    font-weight: 'regular';
+    font-size: 1.9rem;
+    color: #5c5c5c;
+    letter-spacing: 1px;
+    line-height: 1.5em;
+    text-transform: none;
+}
+
+.sys_layout h3, .sys_txt h3 {
+    font-family: 'Lato';
+    
+    font-size: 1.1rem;
+    color: #7a7a7a;
+    text-decoration: none;
+    letter-spacing: 1px;
+    line-height: 1.5em;
+    text-transform: uppercase;
+}
+
+.sys_layout h3 a, .sys_layout h3 a:link, .sys_layout h3 a:hover, .sys_layout h3 a:visited {
+    font-family: 'Lato';
+    
+    font-size: 1.1rem;
+    color: #7a7a7a;
+    letter-spacing: 1px;
+    line-height: 1.5em;
+    text-transform: uppercase;
+}
+
+.sys_layout h4, .sys_txt h4 {
+    font-family: 'Lato';
+    
+    font-size: 1rem;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 1px;
+    line-height: 1.5em;
+    text-transform: uppercase;
+}
+
+.sys_layout h4 a, .sys_layout h4 a:link, .sys_layout h4 a:hover, .sys_layout h4 a:visited {
+    font-family: 'Lato';
+    
+    font-size: 1rem;
+    color: #ffffff;
+    letter-spacing: 1px;
+    line-height: 1.5em;
+    text-transform: uppercase;
+}
+
+.sys_layout h5, .sys_txt h5 {
+    font-family: 'Lato';
+    
+    font-size: 0.8rem;
+    color: #7a7a7a;
+    text-decoration: none;
+    letter-spacing: 1px;
+    line-height: 1.5em;
+    text-transform: uppercase;
+}
+
+.sys_layout h5 a, .sys_layout h5 a:link, .sys_layout h5 a:hover, .sys_layout h5 a:visited {
+    font-family: 'Lato';
+    
+    font-size: 0.8rem;
+    color: #7a7a7a;
+    letter-spacing: 1px;
+    line-height: 1.5em;
+    text-transform: uppercase;
+}
+
+.sys_layout h6, .sys_txt h6 {
+    font-family: 'Lato';
+    
+    font-size: 0.7rem;
+    color: #7a7a7a;
+    
+    letter-spacing: 1px;
+    line-height: 1.5em;
+    text-transform: uppercase;
+}
+
+.sys_layout h6 a, .sys_layout h6 a:link, .sys_layout h6 a:hover, .sys_layout h6 a:visited {
+    font-family: 'Lato';
+    
+    font-size: 0.7rem;
+    color: #7a7a7a;
+    letter-spacing: 1px;
+    line-height: 1.5em;
+    text-transform: uppercase;
+}
+
+/*button widget*/
+.sys_layout .sys_button a, .sys_layout .sys_button a:link, .sys_layout .sys_button a:visited {
+    display:inline-block;
+    text-decoration: none;
+}
+.sys_layout .sys_button a:link, .sys_layout .sys_button a:visited {
+    cursor:pointer;
+}
+.sys_layout .sys_button a {
+    cursor:default;
+}
+
+.sys_layout .sys_button.square a, .sys_layout .sys_button.square a:link {
+    border-radius:0px;
+}
+.sys_layout .sys_button.rounded a, .sys_layout .sys_button.rounded a:link {
+    border-radius:3px;
+}
+.sys_layout .sys_button.pill a, .sys_layout .sys_button.pill a:link {
+    border-radius:90px;
+}
+
+/*button sizes*/
+.sys_layout .sys_button.small a, .sys_layout .sys_button.small a:link, .sys_layout .sys_button.small a:visited {font-family: 'Montserrat';font-weight: ''regular'';font-size: 0.8rem;padding-top:0.6rem;padding-bottom:0.6rem;padding-left:1.5rem;padding-right:1.5rem;}
+.sys_layout .sys_button.medium a, .sys_layout .sys_button.medium a:link, .sys_layout .sys_button.medium a:visited {font-family: 'Montserrat';font-weight: 'regular';font-size: 1rem;padding-top:0.8rem;padding-bottom:0.8rem;padding-left:2.5rem;padding-right:2.5rem;}
+.sys_layout .sys_button.large a, .sys_layout .sys_button.large a:link, .sys_layout .sys_button.large a:visited {font-family: 'Montserrat';font-weight: 'regular';font-size: 1.3rem;padding-top:1.3rem;padding-bottom:1.3rem;padding-left:3.1rem;padding-right:3.1rem;}
+
+/*button styles:small*/
+.sys_layout .sys_button.small.outline a, .sys_layout .sys_button.small.outline a:link {
+    border-color:rgba(92,92,92,1.00);
+    color: rgba(92,92,92,1.00);
+    border-style: solid;
+    border-width: 2px;
+}
+.sys_layout .sys_button.small.outline a:visited {
+    color: rgba(92,92,92,1.00);
+}
+.sys_layout .sys_button.small.solid a, .sys_layout .sys_button.small.solid a:link {
+    	background-color: #5c5c5c;
+
+    color: #ffffff;
+    border-color:rgba(92,92,92,1.00);
+    border-style: solid;
+    border-width: 2px;
+}
+.sys_layout .sys_button.small.solid a:visited {
+    color: #ffffff;
+}
+.sys_layout .sys_button.small.outline a:hover {
+    background-color: rgba(92,92,92,1.00);
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/*button styles:medium*/
+.sys_layout .sys_button.medium.outline a, .sys_layout .sys_button.medium.outline a:link {
+    border-color:rgba(92,92,92,1.00);
+    color: rgba(92,92,92,1.00);
+    border-style: solid;
+    border-width: 2px;
+}
+.sys_layout .sys_button.medium.outline a:visited {
+    color: rgba(92,92,92,1.00);
+}
+.sys_layout .sys_button.medium.solid a, .sys_layout .sys_button.medium.solid a:link {
+    	background-color: #5c5c5c;
+
+    color: #ffffff;
+    border-color:rgba(92,92,92,1.00);
+    border-style: solid;
+    border-width: 2px;
+}
+.sys_layout .sys_button.medium.solid a:visited {
+    color: #ffffff;
+}
+.sys_layout .sys_button.medium.outline a:hover {
+    background-color: rgba(92,92,92,1.00);
+    color: #ffffff;
+    text-decoration: none;
+}
+/*button styles:large*/
+.sys_layout .sys_button.large.outline a, .sys_layout .sys_button.large.outline a:link {
+    border-color:rgba(219,80,33,1.00);
+    color: rgba(219,80,33,1.00);
+    border-style: solid;
+    border-width: 2px;
+}
+.sys_layout .sys_button.large.outline a:visited {
+    color: rgba(219,80,33,1.00);
+}
+.sys_layout .sys_button.large.solid a, .sys_layout .sys_button.large.solid a:link {
+    	background-color: #db5021;
+
+    color: #ffffff;
+    border-color:rgba(219,80,33,1.00);
+    border-style: solid;
+    border-width: 2px;
+}
+.sys_layout .sys_button.large.solid a:visited {
+    color: #ffffff;
+}
+.sys_layout .sys_button.large.outline a:hover {
+    background-color: rgba(219,80,33,1.00);
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.sys_layout .sys_button.solid a:hover {
+    text-decoration: none;
+    opacity: .8;
+}  </style>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">window.jQuery || document.write('<script src="/components/bower_components/jquery/dist/jquery.js"><\/script>')</script>
+<script type="text/javascript">
+  var swRegisterManager = {
+    goals: [],
+    add: function(swGoalRegister) {
+      this.goals.push(swGoalRegister);
+    },
+    registerGoals: function() {
+      while(this.goals.length) {
+        this.goals.shift().call();
+      }
+    }
+  };
+
+  window.swPostRegister = swRegisterManager.registerGoals.bind(swRegisterManager);
+</script>
+</head>
+<div id="sys_background" class="yola_bg_overlay">
+<div class="yola_inner_bg_overlay">
+<div class="yola_outer_content_wrapper">
+<header role="header">
+<div class="yola_outer_heading_wrap">
+<div class="yola_heading_container">
+<div class="yola_inner_heading_wrap left">
+<div class="yola_innermost_heading_wrap">
+<nav class="mob_menu">
+<div class="mob_menu_toggle">
+<svg class="mobile_ham" width="40" height="25">
+<line x1="0" y1="3" x2="40" y2="3" stroke-width="2"/>
+<line x1="0" y1="13" x2="40" y2="13" stroke-width="2"/>
+<line x1="0" y1="23" x2="40" y2="23" stroke-width="2"/>
+</svg>
+<svg class="mobile_quit" width="26" height="50">
+<line x1="0" y1="1" x2="26" y2="25" stroke-width="2"/>
+<line x1="0" y1="25" x2="26" y2="1" stroke-width="2"/>
+</svg>
+</div>
+<div class="mob_menu_overlay"> 
+<ul class="mob_menu_list">
+<li class="">
+<a href="./" title="Home">Home</a>
+</li>
+<li class="">
+<a href="Download.html" title="Download">Download</a>
+</li>
+<li class="selected">
+<a href="documentation.html" title="Documentation">Documentation</a>
+</li>
+</ul>
+</div>
+</nav>
+<div id="yola_heading_block"> 
+<h1>
+<a id="sys_heading" class="yola_hide_logo" href="./">
+<img class="yola_site_logo" src="documentation.html" alt="Infinite Yield">
+<span>Infinite Yield</span>
+</a>
+</h1>
+</div>
+<div id="yola_nav_block"> 
+<nav role="navigation">
+<div class="sys_navigation">
+<ul class="sys_navigation">
+<li id="ys_menu_0">
+<a href="./" title="Home">Home</a>
+</li>
+<li id="ys_menu_1">
+<a href="Download.html" title="Download">Download</a>
+</li>
+<li id="ys_menu_2" class="selected">
+<a href="documentation.html" title="Documentation">Documentation</a>
+</li>
+</ul>
+<script>
+$(document).ready(function() {
+    flyoutMenu.initFlyoutMenu(
+        [{"name":"Home","title":"Home","href":".\/","children":[]},{"name":"Download","title":"Download","href":"Download.html","children":[]},{"name":"Documentation","title":"Documentation","href":"documentation.html","children":[]}]
+    , 'flyover');
+});
+</script>
+</div>
+</nav>
+</div>
+<div style="padding:0; height:0; clear:both;">&nbsp;</div>
+</div>
+</div>
+</div>
+<div id="sys_banner" class="yola_banner_wrap">
+<div class="yola_inner_banner_wrap">
+<div class="yola_innermost_banner_wrap">
+<h2 class="yola_site_tagline" style="display:none"><span></span></h2>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="yola_content_wrap" role="main">
+<div class="yola_content_column">
+<div class="yola_inner_content_column clearFix">
+<style media="screen">
+  .layout_1-column {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .layout_1-column:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .zone_top {
+    margin: 0;
+    padding: 5px;
+    vertical-align: top;
+    line-height: normal;
+    min-width: 100px;
+  }
+</style>
+<div class="layout_1-column sys_layout">
+<div id="layout_row1">
+<div id="sys_region_1" class="zone_top"><div id="I541d9f4f66c54e04a3d366bc6a9cdaa8" style="display:block;clear: both;" class="Text_2_Default"><style type="text/css">
+    div.sys_text_widget img.float-left{float:left;margin:10px 15px 10px 0;}
+    div.sys_text_widget img.float-right{position:relative;margin:10px 0 10px 15px;}
+    div.sys_text_widget img{margin:4px;}
+    div.sys_text_widget {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        color: ;
+        font: ;
+        background-color: ;
+    }
+</style>
+<div id="I541d9f4f66c54e04a3d366bc6a9cdaa8_sys_txt" systemelement="true" class="sys_txt sys_text_widget new-text-widget"><h2>Command execution and arguments</h2></div></div><div id="If808378992d6427e82fd0772ce9135a3" style="display:block;clear: both;" class="Text_2_Default"><style type="text/css">
+    div.sys_text_widget img.float-left{float:left;margin:10px 15px 10px 0;}
+    div.sys_text_widget img.float-right{position:relative;margin:10px 0 10px 15px;}
+    div.sys_text_widget img{margin:4px;}
+    div.sys_text_widget {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        color: ;
+        font: ;
+        background-color: ;
+    }
+</style>
+<div id="If808378992d6427e82fd0772ce9135a3_sys_txt" systemelement="true" class="sys_txt sys_text_widget new-text-widget"><h4>SPECIAL PLAYER CASES:</h4></div></div><div id="Ie7cce95dc53b45679170f53281659d3f" style="display:block;clear: both;" class="Text_2_Default"><style type="text/css">
+    div.sys_text_widget img.float-left{float:left;margin:10px 15px 10px 0;}
+    div.sys_text_widget img.float-right{position:relative;margin:10px 0 10px 15px;}
+    div.sys_text_widget img{margin:4px;}
+    div.sys_text_widget {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        color: ;
+        font: ;
+        background-color: ;
+    }
+</style>
+<div id="Ie7cce95dc53b45679170f53281659d3f_sys_txt" systemelement="true" class="sys_txt sys_text_widget new-text-widget"><p><span style="color: rgb(204, 204, 204);">all</span> - includes everyone<br><span style="color: rgb(204, 204, 204);">others</span> - includes everyone except you<br><span style="color: rgb(204, 204, 204);">me</span> - includes your player only<br><span style="color: rgb(204, 204, 204);">@username</span> - searches for players by username only (ignores displaynames)<br><span style="color: rgb(204, 204, 204);">#[number]</span> - gets a specified amount of random players<br><span style="color: rgb(204, 204, 204);">random</span> - affects a random player<br><span style="color: rgb(204, 204, 204);">%[team name]</span> - includes everyone on a given team<br><span style="color: rgb(204, 204, 204);">allies / team</span> - players who are on your team<br><span style="color: rgb(204, 204, 204);">enemies / nonteam</span> - players who are not on your team<br><span style="color: rgb(204, 204, 204);">friends</span> - anyone who is friends with you (might not work on someone if ran immediately after you friend them)<br><span style="color: rgb(204, 204, 204);">nonfriends</span> - anyone who is not friends with you<br><span style="color: rgb(204, 204, 204);">guests</span> - guest players (I don't think guests even exist anymore)<br><span style="color: rgb(204, 204, 204);">bacons</span> - anyone with the "bacon" or pal hair<br><span style="color: rgb(204, 204, 204);">age[number]</span> - includes anyone below or at the given age<br><span style="color: rgb(204, 204, 204);">rad[number]</span> - includes anyone within the given radius<br><span style="color: rgb(204, 204, 204);">nearest</span> - gets the closest player to you<br><span style="color: rgb(204, 204, 204);">farthest</span> - gets the farthest player from you<br><span style="color: rgb(204, 204, 204);">group[ID]</span> - gets players who are in a certain group<br><span style="color: rgb(204, 204, 204);">alive</span> - gets players who are alive<br><span style="color: rgb(204, 204, 204);">dead</span> - gets players who are dead</p></div></div><div id="Ib0a9f766e0d64ef4904bd2431084d33f" style="display:block;clear: both;" class="Text_2_Default"><style type="text/css">
+    div.sys_text_widget img.float-left{float:left;margin:10px 15px 10px 0;}
+    div.sys_text_widget img.float-right{position:relative;margin:10px 0 10px 15px;}
+    div.sys_text_widget img{margin:4px;}
+    div.sys_text_widget {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        color: ;
+        font: ;
+        background-color: ;
+    }
+</style>
+<div id="Ib0a9f766e0d64ef4904bd2431084d33f_sys_txt" systemelement="true" class="sys_txt sys_text_widget new-text-widget"><p>Get multiple players using commas: ;locate noob<span style="color: rgb(204, 204, 204);">,</span>noob2<span style="color: rgb(204, 204, 204);">,</span>bob</p>
+<p>You can use <span style="color: rgb(204, 204, 204);">-</span> to exclude and <span style="color: rgb(204, 204, 204);">+</span> to include / <span style="color: rgb(204, 204, 204);">-</span> to set difference and <span style="color: rgb(204, 204, 204);">+</span> to set intersection</p>
+<p>Example:<br>;locate <span style="color: rgb(204, 204, 204);">-</span>age15 - gets everyone above age 15 instead of below</p></div></div><div id="I4cc8ae3030204bb7b6ed2806cfb8359e" style="display:block;clear: both;" class="Text_2_Default"><style type="text/css">
+    div.sys_text_widget img.float-left{float:left;margin:10px 15px 10px 0;}
+    div.sys_text_widget img.float-right{position:relative;margin:10px 0 10px 15px;}
+    div.sys_text_widget img{margin:4px;}
+    div.sys_text_widget {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        color: ;
+        font: ;
+        background-color: ;
+    }
+</style>
+<div id="I4cc8ae3030204bb7b6ed2806cfb8359e_sys_txt" systemelement="true" class="sys_txt sys_text_widget new-text-widget"><h4>LOOP COMMANDS:</h4></div></div><div id="Ie1a738b964a54338934d5905fa31d5cc" style="display:block;clear: both;" class="Text_2_Default"><style type="text/css">
+    div.sys_text_widget img.float-left{float:left;margin:10px 15px 10px 0;}
+    div.sys_text_widget img.float-right{position:relative;margin:10px 0 10px 15px;}
+    div.sys_text_widget img{margin:4px;}
+    div.sys_text_widget {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        color: ;
+        font: ;
+        background-color: ;
+    }
+</style>
+<div id="Ie1a738b964a54338934d5905fa31d5cc_sys_txt" systemelement="true" class="sys_txt sys_text_widget new-text-widget"><p>[How many times it loops]<span style="color: #cccccc;">^</span>[delay (optional)]<span style="color: #cccccc;">^</span>[command]</p>
+<p>The "<span style="color: #cccccc;">breakloops</span>" command stops all running loops</p>
+<p>Examples:<br>;5<span style="color: #cccccc;">^</span>btools - gives you 5 sets of btools<br>;10<span style="color: #cccccc;">^</span>3<span style="color: #cccccc;">^</span>drophats - drops your hats every 3 seconds 10 times<br>;inf<span style="color: rgb(204, 204, 204);">^</span>0.1<span style="color: rgb(204, 204, 204);">^</span>animspeed 100 - infinitely loops your animation speed to 100</p></div></div><div id="Ic789dc1963724b66aed146c0aca80a40" style="display:block;clear: both;" class="Text_2_Default"><style type="text/css">
+    div.sys_text_widget img.float-left{float:left;margin:10px 15px 10px 0;}
+    div.sys_text_widget img.float-right{position:relative;margin:10px 0 10px 15px;}
+    div.sys_text_widget img{margin:4px;}
+    div.sys_text_widget {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        color: ;
+        font: ;
+        background-color: ;
+    }
+</style>
+<div id="Ic789dc1963724b66aed146c0aca80a40_sys_txt" systemelement="true" class="sys_txt sys_text_widget new-text-widget"><h4>EXECUTE MULTIPLE COMMANDS AT ONCE:</h4></div></div><div id="Icd372a44ccd141548a647ccbff6ed859" style="display:block;clear: both;" class="Text_2_Default"><style type="text/css">
+    div.sys_text_widget img.float-left{float:left;margin:10px 15px 10px 0;}
+    div.sys_text_widget img.float-right{position:relative;margin:10px 0 10px 15px;}
+    div.sys_text_widget img{margin:4px;}
+    div.sys_text_widget {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        color: ;
+        font: ;
+        background-color: ;
+    }
+</style>
+<div id="Icd372a44ccd141548a647ccbff6ed859_sys_txt" systemelement="true" class="sys_txt sys_text_widget new-text-widget"><p>You can execute multiple commands at once using "<span style="color: rgb(204, 204, 204);">\</span>"</p>
+<p>Examples:<br>;drophats<span style="color: rgb(204, 204, 204);">\</span>respawn - drops your hats and respawns you<br>;enable inventory<span style="color: rgb(204, 204, 204);">\</span>enable playerlist<span style="color: rgb(204, 204, 204);">\</span>refresh - enables those coregui items and refreshes you</p></div></div><div id="I4df4896b1e72476eb1c1a163d7b8a6eb" style="display:block;clear: both;" class="Text_2_Default"><style type="text/css">
+    div.sys_text_widget img.float-left{float:left;margin:10px 15px 10px 0;}
+    div.sys_text_widget img.float-right{position:relative;margin:10px 0 10px 15px;}
+    div.sys_text_widget img{margin:4px;}
+    div.sys_text_widget {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        color: ;
+        font: ;
+        background-color: ;
+    }
+</style>
+<div id="I4df4896b1e72476eb1c1a163d7b8a6eb_sys_txt" systemelement="true" class="sys_txt sys_text_widget new-text-widget"><h4>BROWSE COMMAND HISTORY:</h4></div></div><div id="I0970ababf45b43948f91e9910adf6a58" style="display:block;clear: both;" class="Text_2_Default"><style type="text/css">
+    div.sys_text_widget img.float-left{float:left;margin:10px 15px 10px 0;}
+    div.sys_text_widget img.float-right{position:relative;margin:10px 0 10px 15px;}
+    div.sys_text_widget img{margin:4px;}
+    div.sys_text_widget {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        color: ;
+        font: ;
+        background-color: ;
+    }
+</style>
+<div id="I0970ababf45b43948f91e9910adf6a58_sys_txt" systemelement="true" class="sys_txt sys_text_widget new-text-widget"><p>While focused on the command bar, you can use the <span style="color: rgb(204, 204, 204);">up</span> and <span style="color: rgb(204, 204, 204);">down</span> arrow keys to browse recently used commands</p></div></div><div id="I41edb224dd8f41119ca1b8ed768c8aca" style="display:block;clear: both;" class="Text_2_Default"><style type="text/css">
+    div.sys_text_widget img.float-left{float:left;margin:10px 15px 10px 0;}
+    div.sys_text_widget img.float-right{position:relative;margin:10px 0 10px 15px;}
+    div.sys_text_widget img{margin:4px;}
+    div.sys_text_widget {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        color: ;
+        font: ;
+        background-color: ;
+    }
+</style>
+<div id="I41edb224dd8f41119ca1b8ed768c8aca_sys_txt" systemelement="true" class="sys_txt sys_text_widget new-text-widget"><h4>Autocomplete in the command bar:</h4></div></div><div id="I2d218c74b786411aad48e2e3dfc01f4c" style="display:block;clear: both;" class="Text_2_Default"><style type="text/css">
+    div.sys_text_widget img.float-left{float:left;margin:10px 15px 10px 0;}
+    div.sys_text_widget img.float-right{position:relative;margin:10px 0 10px 15px;}
+    div.sys_text_widget img{margin:4px;}
+    div.sys_text_widget {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        color: ;
+        font: ;
+        background-color: ;
+    }
+</style>
+<div id="I2d218c74b786411aad48e2e3dfc01f4c_sys_txt" systemelement="true" class="sys_txt sys_text_widget new-text-widget"><p>While focused on the command bar, you can use the <span style="color: rgb(204, 204, 204);">tab </span>key to insert the top suggested command into the command bar.</p></div></div><div id="I35dd1642caa440d6b5c3af880918a420" style="display:block;clear: both;text-align:left;" class="HTML_Default"> <div id="I35dd1642caa440d6b5c3af880918a420_html" class="responsive_embed"><!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  width: 47%;
+  font-size: 18px;
+  padding: 8px 10px 8px 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+</style>
+</head>
+<body>
+<h2>Infinite Yield FE Commands</h2>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for commands..." title="Start typing a command">
+<ul id="myUL">
+<li><a ="#">console (Loads old Roblox console)</a></li>
+<li><a ="#">explorer / dex (Opens DEX explorer)</a></li>
+<li><a ="#">remotespy / rspy (Opens FrostHook Spy)</a></li>
+<li><a ="#">audiologger / alogger (Opens Edges audio logger)</a></li>
+<li><a ="#">serverinfo / info (Gives you info about the server)</a></li>
+<li><a ="#">jobid (Copies the games JobId to your clipboard)</a></li>
+<li><a ="#">notifyjobid (Notifies you the games JobId)</a></li>
+<li><a ="#">rejoin / rj (Makes you rejoin the game)</a></li>
+<li><a ="#">autorejoin / autorj (Automatically rejoins the server if you get kicked/disconnected)</a></li>
+<li><a ="#">serverhop / shop (Teleports you to a different server)</a></li>
+<li><a ="#">joinplayer [username / ID] [place ID] (Joins a specific players server)</a></li>
+<li><a ="#">gameteleport / gametp [place ID] (Joins a game by ID)</a></li>
+<li><a ="#">antiidle / antiafk (Prevents the game from kicking you for being idle/afk)</a></li>
+<li><a ="#">datalimit [num] (Set outgoing KBPS limit)</a></li>
+<li><a ="#">replicationlag / backtrack [num] (Set IncomingReplicationLag)</a></li>
+<li><a ="#">creatorid / creator (Notifies you the creators ID)</a></li>
+<li><a ="#">copycreatorid / copycreator (Copies the creators ID to your clipboard)</a></li>
+<li><a ="#">setcreatorid / setcreator (Sets your userid to the creators ID)</a></li>
+<li><a ="#">noprompts (Prevents the game from showing you purchase/premium prompts)</a></li>
+<li><a ="#">showprompts (Allows the game to show purchase/premium prompts again)</a></li>
+<li><a ="#">enable [inventory/playerlist/chat/all] (Toggles visibility of coregui items)</a></li>
+<li><a ="#">disable [inventory/playerlist/chat/all] (Toggles visibility of coregui items)</a></li>
+<li><a ="#">showguis (Shows any invisible GUIs)</a></li>
+<li><a ="#">unshowguis (Undoes showguis)</a></li>
+<li><a ="#">hideguis (Hides any GUIs in PlayerGui)</a></li>
+<li><a ="#">unhideguis (Undoes hideguis)</a></li>
+<li><a ="#">guidelete (Enables backspace to delete GUI)</a></li>
+<li><a ="#">unguidelete / noguidelete (Disables guidelete)</a></li>
+<li><a ="#">hideiy (Hides the main IY GUI)</a></li>
+<li><a ="#">showiy / unhideiy (Shows IY again)</a></li>
+<li><a ="#">savegame / saveplace (Uses saveinstance to save the game)</a></li>
+<li><a ="#">clearerror (Clears the annoying box and blur when a game kicks you)</a></li>
+<li><a ="#">clientantikick / antikick (CLIENT) (Prevents localscripts from kicking you)</a></li>
+<li><a ="#">clientantiteleport / antiteleport (CLIENT) (Prevents localscripts from teleporting you)</a></li>
+<li><a ="#">allowrejoin / allowrj [true/false] (CLIENT) (Changes if antiteleport allows you to rejoin or not)</a></li>
+<li><a ="#">cancelteleport / canceltp (Cancels teleports in progress)</a></li>
+<li><a ="#">volume / vol [0-10] (Adjusts your game volume on a scale of 0 to 10)</a></li>
+<li><a ="#">antilag / boostfps / lowgraphics (Lowers game quality to boost FPS)</a></li>
+<li><a ="#">record / rec (Starts roblox recorder)</a></li>
+<li><a ="#">screenshot / scrnshot (Takes a screenshot)</a></li>
+<li><a ="#">togglefullscreen / togglefs (Toggles fullscreen)</a></li>
+<li><a ="#">notify [text] (Sends you a notification with the provided text)</a></li>
+<li><a ="#">lastcommand / lastcmd (Executes the previous command used)</a></li>
+<li><a ="#">exit (Kills roblox process)</a></li>
+<li><a ="#">noclip (Go through objects)</a></li>
+<li><a ="#">unnoclip / clip (Disables noclip)</a></li>
+<li><a ="#">fly [speed] (Makes you fly)</a></li>
+<li><a ="#">unfly (Disables fly)</a></li>
+<li><a ="#">flyspeed [num] (Set fly speed (default is 20))</a></li>
+<li><a ="#">vehiclefly / vfly [speed] (Makes you fly in a vehicle)</a></li>
+<li><a ="#">unvehiclefly / unvfly (Disables vehicle fly)</a></li>
+<li><a ="#">vehicleflyspeed / vflyspeed [num] (Set vehicle fly speed)</a></li>
+<li><a ="#">cframefly / cfly [speed] (Makes you fly, bypassing some anti cheats)</a></li>
+<li><a ="#">uncframefly / uncfly (Disables cfly)</a></li>
+<li><a ="#">cframeflyspeed / cflyspeed [num] (Sets cfly speed)</a></li>
+<li><a ="#">qefly [true / false] (enables or disables the Q and E hotkeys for fly)</a></li>
+<li><a ="#">vehiclenoclip / vnoclip (Turns off vehicle collision)</a></li>
+<li><a ="#">vehicleclip / vclip / unvnoclip (Enables vehicle collision)</a></li>
+<li><a ="#">float / platform (Spawns a platform beneath you causing you to float)</a></li>
+<li><a ="#">unfloat / noplatform (Removes the platform)</a></li>
+<li><a ="#">swim (Allows you to swim in the air)</a></li>
+<li><a ="#">unswim / noswim (Stops you from swimming everywhere)</a></li>
+<li><a ="#">setwaypoint / swp [name] (Sets a waypoint at your position)</a></li>
+<li><a ="#">waypointpos / wpp [name] [X Y Z] (Sets a waypoint with specified coordinates)</a></li>
+<li><a ="#">showwaypoints / showwp (Shows all currently set waypoints)</a></li>
+<li><a ="#">hidewaypoints / hidewp (Hides shown waypoints)</a></li>
+<li><a ="#">waypoint / wp [name] (Teleports player to a waypoint)</a></li>
+<li><a ="#">tweenwaypoint / twp [name] (Tweens player to a waypoint)</a></li>
+<li><a ="#">walktowaypoint / wtwp [name] (Walks player to a waypoint)</a></li>
+<li><a ="#">deletewaypoint / dwp [name] (Deletes a waypoint)</a></li>
+<li><a ="#">clearwaypoints / cwp (Clears all waypoints)</a></li>
+<li><a ="#">goto [plr] (Go to a player)</a></li>
+<li><a ="#">tweengoto / tgoto [plr] (Tween to a player (bypasses some anti cheats))</a></li>
+<li><a ="#">tweenspeed / tspeed [num] (Sets how fast all tween commands go (default is 1))</a></li>
+<li><a ="#">vehiclegoto / vgoto [plr] (Go to a player while in a vehicle)</a></li>
+<li><a ="#">loopgoto [plr] [distance] [delay] (Loop teleport to a player)</a></li>
+<li><a ="#">unloopgoto (Stops teleporting you to a player)</a></li>
+<li><a ="#">pulsetp / ptp [plr] [seconds] (Teleports you to a player for a set time)</a></li>
+<li><a ="#">clientbring / cbring [plr] (CLIENT) (Bring a player)</a></li>
+<li><a ="#">loopbring [plr] [distance] [delay] (CLIENT) (Loop brings a player to you (useful for killing))</a></li>
+<li><a ="#">unloopbring [plr] (Undoes loopbring)</a></li>
+<li><a ="#">freeze / fr [plr] (CLIENT) (Freezes a player)</a></li>
+<li><a ="#">thaw / unfr [plr] (CLIENT) (Unfreezes a player)</a></li>
+<li><a ="#">tpposition / tppos [X Y Z] (Teleports you to certain coordinates)</a></li>
+<li><a ="#">tweentpposition / ttppos [X Y Z] (Tween to coordinates (bypasses some anti cheats))</a></li>
+<li><a ="#">offset [X Y Z] (Offsets you by certain coordinates)</a></li>
+<li><a ="#">tweenoffset / toffset [X Y Z] (Tween offset (bypasses some anti cheats))</a></li>
+<li><a ="#">notifyposition / notifypos [plr] (Notifies you the coordinates of a character)</a></li>
+<li><a ="#">copyposition / copypos [plr] (Copies the coordinates of a character to your clipboard)</a></li>
+<li><a ="#">walktoposition / walktopos [X Y Z] (Makes you walk to a coordinate)</a></li>
+<li><a ="#">spawnpoint / spawn [delay] (Sets a position where you will spawn)</a></li>
+<li><a ="#">nospawnpoint / nospawn (Removes your custom spawn point)</a></li>
+<li><a ="#">flashback / diedtp (Teleports you to where you last died)</a></li>
+<li><a ="#">walltp (Teleports you above/over any wall you run into)</a></li>
+<li><a ="#">nowalltp / unwalltp (Disables walltp)</a></li>
+<li><a ="#">teleporttool / tptool (Gives you a teleport tool)</a></li>
+<li><a ="#">logs (Opens the logs GUI)</a></li>
+<li><a ="#">chatlogs / clogs (Log what people say or whisper)</a></li>
+<li><a ="#">joinlogs / jlogs (Log when people join)</a></li>
+<li><a ="#">chat / say [text] (Makes you chat a string (possible mute bypass))</a></li>
+<li><a ="#">spam [text] (Makes you spam the chat)</a></li>
+<li><a ="#">unspam (Turns off spam)</a></li>
+<li><a ="#">whisper / pm [plr] [text] (Makes you whisper a string to someone (possible mute bypass))</a></li>
+<li><a ="#">pmspam [plr] [text] (Makes you spam a players whispers)</a></li>
+<li><a ="#">unpmspam [plr] (Turns off pm spam)</a></li>
+<li><a ="#">spamspeed [num] (How quickly you spam (default is 1))</a></li>
+<li><a ="#">bubblechat (CLIENT) (Enables bubble chat for your client)</a></li>
+<li><a ="#">unbubblechat / nobubblechat (Disables the bubblechat command)</a></li>
+<li><a ="#">safechat (Enables safe chat)</a></li>
+<li><a ="#">nosafechat / disablesafechat (Disables safechat)</a></li>
+<li><a ="#">esp (View all players and their status)</a></li>
+<li><a ="#">noesp / unesp (Removes esp)</a></li>
+<li><a ="#">partesp [part name] (Highlights a part)</a></li>
+<li><a ="#">unpartesp / nopartesp [part name] (removes partesp)</a></li>
+<li><a ="#">chams (ESP but without text in the way)</a></li>
+<li><a ="#">nochams / unchams (Removes chams)</a></li>
+<li><a ="#">locate [plr] (View a single player and their status)</a></li>
+<li><a ="#">unlocate / nolocate [plr] (Removes locate)</a></li>
+<li><a ="#">xray (Makes all parts in workspace transparent)</a></li>
+<li><a ="#">unxray / noxray (Restores transparency)</a></li>
+<li><a ="#">spectate / view [plr] (View a player)</a></li>
+<li><a ="#">viewpart / viewp [part name] (View a part)</a></li>
+<li><a ="#">unspectate / unview (Stops viewing player)</a></li>
+<li><a ="#">freecam / fc (Allows you to freely move camera around the game)</a></li>
+<li><a ="#">freecampos / fcpos [X Y Z] (Moves / opens freecam in a certain position)</a></li>
+<li><a ="#">freecamwaypoint / fcwp [name] (Moves / opens freecam to a waypoint)</a></li>
+<li><a ="#">freecamgoto / fcgoto / fctp [plr] (Moves / opens freecam to a player)</a></li>
+<li><a ="#">unfreecam / unfc (Disables freecam)</a></li>
+<li><a ="#">freecamspeed / fcspeed [num] (Adjusts freecam speed (default is 1))</a></li>
+<li><a ="#">gotocamera / gotocam (Teleports you to the location of your camera)</a></li>
+<li><a ="#">tweengotocam / tgotocam (Tweens you to the location of your camera)</a></li>
+<li><a ="#">firstp (Forces camera to go into first person)</a></li>
+<li><a ="#">thirdp (Allows camera to go into third person)</a></li>
+<li><a ="#">noclipcam / nccam (Allows camera to go through objects like walls)</a></li>
+<li><a ="#">maxzoom [num] (Maximum camera zoom)</a></li>
+<li><a ="#">minzoom [num] (Minimum camera zoom)</a></li>
+<li><a ="#">fov [num] (Adjusts field of view (default is 70))</a></li>
+<li><a ="#">fixcam / restorecam (Fixes camera)</a></li>
+<li><a ="#">enableshiftlock / enablesl (Enables the shift lock option)</a></li>
+<li><a ="#">lookat [plr] (Moves your camera view to a player)</a></li>
+<li><a ="#">btools (CLIENT) (Gives you building tools (DOES NOT REPLICATE))</a></li>
+<li><a ="#">f3x (CLIENT) (Gives you F3X building tools (DOES NOT REPLICATE))</a></li>
+<li><a ="#">partname / partpath (Allows you to click a part to see its path &amp; name)</a></li>
+<li><a ="#">delete [instance name] (CLIENT) (Removes any part with a certain name from the workspace (DOES NOT REPLICATE))</a></li>
+<li><a ="#">deleteclass / dc [class name] (CLIENT) (Removes any part with a certain classname from the workspace (DOES NOT REPLICATE))</a></li>
+<li><a ="#">lockworkspace / lockws (Locks the whole workspace)</a></li>
+<li><a ="#">unlockworkspace / unlockws (Unlocks the whole workspace)</a></li>
+<li><a ="#">invisibleparts / invisparts (CLIENT) (Shows invisible parts)</a></li>
+<li><a ="#">uninvisibleparts / uninvisparts (CLIENT) (Makes parts affected by invisparts return to normal)</a></li>
+<li><a ="#">deleteinvisparts / dip (CLIENT) (Deletes invisible parts)</a></li>
+<li><a ="#">gotopart [part name] (Moves your character to a part or multiple parts)</a></li>
+<li><a ="#">tweengotopart / tgotopart [part name] (Tweens your character to a part or multiple parts)</a></li>
+<li><a ="#">gotopartclass / gpc [class name] (Moves your character to a part or multiple parts based on classname)</a></li>
+<li><a ="#">tweengotopartclass / tgpc [class name] (Tweens your character to a part or multiple parts based on classname)</a></li>
+<li><a ="#">gotomodel [part name] (Moves your character to a model or multiple models)</a></li>
+<li><a ="#">tweengotomodel / tgotomodel [part name] (Tweens your character to a model or multiple models)</a></li>
+<li><a ="#">gotopartdelay / gotomodeldelay [num] (Adjusts how quickly you teleport to each part (default is 0.1))</a></li>
+<li><a ="#">bringpart [part name] (CLIENT) (Moves a part or multiple parts to your character)</a></li>
+<li><a ="#">bringpartclass / bpc [class name] (CLIENT) (Moves a part or multiple parts to your character based on classname)</a></li>
+<li><a ="#">noclickdetectorlimits / nocdlimits (Sets all click detectors MaxActivationDistance to math.huge)</a></li>
+<li><a ="#">fireclickdetectors / firecd (Uses all click detectors in a game)</a></li>
+<li><a ="#">firetouchinterests / touchinterests (Uses all touchinterests in a game)</a></li>
+<li><a ="#">simulationradius / simradius (Sets your SimulationRadius to math.huge)</a></li>
+<li><a ="#">nosimulationradius / nosimradius (Turns off the SimulationRadius loop and restores values to default)</a></li>
+<li><a ="#">tpunanchored / tpua [plr] (Teleports unanchored parts to a player)</a></li>
+<li><a ="#">freezeunanchored / freezeua (Freezes unanchored parts)</a></li>
+<li><a ="#">thawunanchored / thawua / unfreezeua (Thaws unanchored parts)</a></li>
+<li><a ="#">removeterrain / rterrain / noterrain (Removes all terrain)</a></li>
+<li><a ="#">clearnilinstances / nonilinstances / cni (Removes nil instances)</a></li>
+<li><a ="#">destroyheight / dh [num] (Sets FallenPartsDestroyHeight)</a></li>
+<li><a ="#">fullbright / fb (CLIENT) (Makes the map brighter / more visible)</a></li>
+<li><a ="#">loopfullbright / loopfb (CLIENT) (Makes the map brighter / more visible but looped)</a></li>
+<li><a ="#">ambient [num] [num] [num] (CLIENT) (Changes ambient)</a></li>
+<li><a ="#">day (CLIENT) (Changes the time to day for the client)</a></li>
+<li><a ="#">night (CLIENT) (Changes the time to night for the client)</a></li>
+<li><a ="#">nofog (CLIENT) (Removes fog)</a></li>
+<li><a ="#">brightness [num] (CLIENT) (Changes the brightness lighting property)</a></li>
+<li><a ="#">globalshadows / gshadows (CLIENT) (Enables global shadows)</a></li>
+<li><a ="#">noglobalshadows / nogshadows (CLIENT) (Disables global shadows)</a></li>
+<li><a ="#">restorelighting / rlighting (Restores Lighting properties)</a></li>
+<li><a ="#">light [radius] [brightness] (CLIENT) (Gives your player dynamic light)</a></li>
+<li><a ="#">nolight / unlight (Removes dynamic light from your player)</a></li>
+<li><a ="#">inspect / examine [plr] (Opens InspectMenu for a certain player)</a></li>
+<li><a ="#">age [plr] (Tells you the age of a player)</a></li>
+<li><a ="#">chatage [plr] (Chats the age of a player)</a></li>
+<li><a ="#">joindate / jd [plr] (Tells you the date the player joined Roblox)</a></li>
+<li><a ="#">chatjoindate / cjd [plr] (Chats the date the player joined Roblox)</a></li>
+<li><a ="#">copyname / copyuser [plr] (Copies a players full username to your clipboard)</a></li>
+<li><a ="#">userid / id [plr] (Notifies a players user ID)</a></li>
+<li><a ="#">copyuserid / copyid [plr] (Copies a players user ID to your clipboard)</a></li>
+<li><a ="#">appearanceid / aid [plr] (Notifies a players appearance ID)</a></li>
+<li><a ="#">copyappearanceid / caid [plr] (Copies a players appearance ID to your clipboard)</a></li>
+<li><a ="#">bang [plr] [speed] (owo)</a></li>
+<li><a ="#">unbang (uwu)</a></li>
+<li><a ="#">carpet [plr] (Be someones carpet)</a></li>
+<li><a ="#">uncarpet (Undoes carpet)</a></li>
+<li><a ="#">friend [plr] (Sends a friend request to certain players)</a></li>
+<li><a ="#">unfriend [plr] (Unfriends certain players)</a></li>
+<li><a ="#">headsit [plr] (Sit on a players head)</a></li>
+<li><a ="#">walkto / follow [plr] (Follow a player)</a></li>
+<li><a ="#">pathfindwalkto / pathfindfollow [plr] (Follow a player using pathfinding)</a></li>
+<li><a ="#">unwalkto / unfollow (Stops following a player)</a></li>
+<li><a ="#">stareat / stare [plr] (Stare / look at a player)</a></li>
+<li><a ="#">unstareat / unstare [plr] (Disables stareat)</a></li>
+<li><a ="#">attach [plr] (TOOL) (Attaches you to a player (YOU NEED A TOOL))</a></li>
+<li><a ="#">kill [plr] (TOOL) (Kills a player (YOU NEED A TOOL))</a></li>
+<li><a ="#">fastkill [plr] (TOOL) (Kills a player (less reliable) (YOU NEED A TOOL))</a></li>
+<li><a ="#">handlekill / hkill [plr] (TOOL) (Kills a player using tool damage (YOU NEED A TOOL))</a></li>
+<li><a ="#">bring [plr] (TOOL) (Brings a player (YOU NEED A TOOL))</a></li>
+<li><a ="#">fastbring [plr] (TOOL) (Brings a player (less reliable) (YOU NEED A TOOL))</a></li>
+<li><a ="#">teleport / tp [plr] [plr] (TOOL) (Teleports a player to another player (YOU NEED A TOOL))</a></li>
+<li><a ="#">fastteleport / fasttp [plr] [plr] (TOOL) (Teleports a player to another player (less reliable) (YOU NEED A TOOL))</a></li>
+<li><a ="#">fling (Flings anyone you touch)</a></li>
+<li><a ="#">unfling (Disables the fling command)</a></li>
+<li><a ="#">invisfling (Enables invisible fling)</a></li>
+<li><a ="#">loopoof (Loops everyones character sounds (everyone can hear))</a></li>
+<li><a ="#">unloopoof (Stops the oof chaos)</a></li>
+<li><a ="#">muteboombox [plr] (Mutes someones boombox)</a></li>
+<li><a ="#">unmuteboombox [plr] (Unmutes someones boombox)</a></li>
+<li><a ="#">unloopoof (Stops the oof chaos)</a></li>
+<li><a ="#">hitbox [plr] [size] (Expands the hitbox for players heads (default is 1))</a></li>
+<li><a ="#">reset (Resets your character normally)</a></li>
+<li><a ="#">respawn (Respawns you)</a></li>
+<li><a ="#">refresh / re (Respawns and brings you back to the same position)</a></li>
+<li><a ="#">god (Makes your character difficult to kill in most games)</a></li>
+<li><a ="#">invisible / invis (Makes you invisible to other players)</a></li>
+<li><a ="#">visible / vis (Makes you visible to other players)</a></li>
+<li><a ="#">toolinvisible / toolinvis / tinvis (Makes you invisible to other players and able to use tools)</a></li>
+<li><a ="#">speed / ws [num] (Change your walkspeed)</a></li>
+<li><a ="#">loopspeed / loopws [num] (Loops your walkspeed)</a></li>
+<li><a ="#">unloopspeed / unloopws (Turns off loopspeed)</a></li>
+<li><a ="#">hipheight / hheight [num] (Adjusts hip height)</a></li>
+<li><a ="#">jumppower / jpower / jp [num] (Change a players jump height)</a></li>
+<li><a ="#">loopjumppower / loopjp [num] (Loops your jump height)</a></li>
+<li><a ="#">unloopjumppower / unloopjp [num] (Turns off loopjumppower)</a></li>
+<li><a ="#">maxslopeangle / msa [num] (Adjusts MaxSlopeAngle)</a></li>
+<li><a ="#">gravity / grav [num] (CLIENT) (Change your gravity)</a></li>
+<li><a ="#">sit (Makes your character sit)</a></li>
+<li><a ="#">sitwalk (Makes your character sit while still being able to walk)</a></li>
+<li><a ="#">nosit (Prevents your character from sitting)</a></li>
+<li><a ="#">unnosit (Disables nosit)</a></li>
+<li><a ="#">jump (Makes your character jump)</a></li>
+<li><a ="#">infinitejump / infjump (Allows you to jump before hitting the ground)</a></li>
+<li><a ="#">uninfinitejump / uninfjump (Disables infjump)</a></li>
+<li><a ="#">flyjump (Allows you to hold space to fly up)</a></li>
+<li><a ="#">unflyjump (Disables flyjump)</a></li>
+<li><a ="#">autojump / ajump (Automatically jumps when you run into an object)</a></li>
+<li><a ="#">unautojump / unajump (Disables autojump)</a></li>
+<li><a ="#">edgejump / ejump (Automatically jumps when you get to the edge of an object)</a></li>
+<li><a ="#">unedgejump / unejump (Disables edgejump)</a></li>
+<li><a ="#">platformstand / stun (Enables PlatformStand)</a></li>
+<li><a ="#">unplatformstand / unstun (Disables PlatformStand)</a></li>
+<li><a ="#">norotate / noautorotate (Disables AutoRotate)</a></li>
+<li><a ="#">unnorotate / autorotate (Enables AutoRotate)</a></li>
+<li><a ="#">enablestate [StateType] (Enables a humanoid state type)</a></li>
+<li><a ="#">disablestate [StateType] (Disables a humanoid state type)</a></li>
+<li><a ="#">team [team name] (CLIENT) (Changes your team. Sometimes fools localscripts.)</a></li>
+<li><a ="#">nobillboardgui / nobgui / noname (Removes billboard and surface guis from your players (i.e. name guis at cafes))</a></li>
+<li><a ="#">loopnobgui / loopnoname (Loop removes billboard and surface guis from your players (i.e. name guis at cafes))</a></li>
+<li><a ="#">unloopnobgui / unloopnoname (Disables loopnobgui)</a></li>
+<li><a ="#">nohead / headless (Removes your head (uses simulation radius))</a></li>
+<li><a ="#">noarms (Removes your arms)</a></li>
+<li><a ="#">nolegs (Removes your legs)</a></li>
+<li><a ="#">nolimbs (Removes your limbs)</a></li>
+<li><a ="#">naked (Removes your clothing)</a></li>
+<li><a ="#">noface / removeface (Removes your face)</a></li>
+<li><a ="#">blockhead (Turns your head into a block)</a></li>
+<li><a ="#">blockhats (Turns your hats into blocks)</a></li>
+<li><a ="#">blocktool (Turns the currently selected tool into a block)</a></li>
+<li><a ="#">creeper (Makes you look like a creeper)</a></li>
+<li><a ="#">drophats (Drops your hats)</a></li>
+<li><a ="#">nohats / deletehats / rhats (Deletes your hats)</a></li>
+<li><a ="#">hatspin / spinhats (Spins your characters accessories)</a></li>
+<li><a ="#">unhatspin / unspinhats (Undoes spinhats)</a></li>
+<li><a ="#">clearhats / cleanhats (Clears hats in the workspace)</a></li>
+<li><a ="#">chardelete / cd [instance name] (Removes any part with a certain name from your character)</a></li>
+<li><a ="#">chardeleteclass / cdc [class name] (Removes any part with a certain classname from your character)</a></li>
+<li><a ="#">deletevelocity / dv / removeforces (Removes any velocity / force instances in your character)</a></li>
+<li><a ="#">weaken [num] (Makes your character less dense)</a></li>
+<li><a ="#">unweaken (Sets your characters CustomPhysicalProperties to default)</a></li>
+<li><a ="#">strengthen [num] (Makes your character more dense (CustomPhysicalProperties))</a></li>
+<li><a ="#">unstrengthen (Sets your characters CustomPhysicalProperties to default)</a></li>
+<li><a ="#">breakvelocity (Sets your characters velocity to 0)</a></li>
+<li><a ="#">spin [speed] (Spins your character)</a></li>
+<li><a ="#">unspin (Disables spin)</a></li>
+<li><a ="#">split (Splits your character in half)</a></li>
+<li><a ="#">nilchar (Sets your characters parent to nil)</a></li>
+<li><a ="#">unnilchar / nonilchar (Sets your characters parent to workspace)</a></li>
+<li><a ="#">noroot / removeroot / rroot (Removes your characters HumanoidRootPart)</a></li>
+<li><a ="#">replaceroot (Replaces your characters HumanoidRootPart)</a></li>
+<li><a ="#">clearcharappearance / clearchar / clrchar (Removes all accessory, shirt, pants, charactermesh, and bodycolors)</a></li>
+<li><a ="#">animation / anim [ID] [speed] (Makes your character perform an animation (must be by roblox to replicate))</a></li>
+<li><a ="#">dance (Makes you d a n c e)</a></li>
+<li><a ="#">undance (Stops dance animations)</a></li>
+<li><a ="#">spasm (Makes you c r a z y)</a></li>
+<li><a ="#">unspasm (Stops spasm)</a></li>
+<li><a ="#">headthrow (Simply makes you throw your head)</a></li>
+<li><a ="#">noanim (Disables your animations)</a></li>
+<li><a ="#">reanim (Restores your animations)</a></li>
+<li><a ="#">animspeed [num] (Changes the speed of your current animation)</a></li>
+<li><a ="#">copyanimation / copyanim / copyemote [plr] (Copies someone elses animation)</a></li>
+<li><a ="#">loopanimation / loopanim (Loops your current animation)</a></li>
+<li><a ="#">stopanimations / stopanims (Stops running animations)</a></li>
+<li><a ="#">refreshanimations / refreshanims / reanim (Refreshes animations)</a></li>
+<li><a ="#">autoclick [click delay] [release delay] (Automatically clicks your mouse with a set delay)</a></li>
+<li><a ="#">unautoclick / noautoclick (Turns off autoclick)</a></li>
+<li><a ="#">autokeypress [key] [down delay] [up delay] (Automatically presses a key with a set delay)</a></li>
+<li><a ="#">unautokeypress (Stops autokeypress)</a></li>
+<li><a ="#">hovername (Shows a players username when your mouse is hovered over them)</a></li>
+<li><a ="#">unhovername / nohovername (Turns off hovername)</a></li>
+<li><a ="#">mousesensitivity / ms [0-10] (Sets your mouse sensitivity (affects first person and right click drag) (default is 1))</a></li>
+<li><a ="#">clickdelete (Go to settings&gt;Keybinds&gt;Add for clicktp)</a></li>
+<li><a ="#">clickteleport (Go to settings&gt;Keybinds&gt;Add for click tp)</a></li>
+<li><a ="#">tools (Copies tools from ReplicatedStorage and Lighting)</a></li>
+<li><a ="#">notools / removetools / deletetools (Removes tools from character and backpack)</a></li>
+<li><a ="#">deleteselectedtool / dst (Removes any currently selected tools)</a></li>
+<li><a ="#">grabtools (Automatically get tools that are dropped)</a></li>
+<li><a ="#">ungrabtools / nograbtools (Disables grabtools)</a></li>
+<li><a ="#">copytools [plr] (CLIENT) (Copies a players tools)</a></li>
+<li><a ="#">dupetools / clonetools [num] (Duplicates your inventory tools a set ammount of times)</a></li>
+<li><a ="#">droptools (Drops your tools)</a></li>
+<li><a ="#">droppabletools (Makes your tools droppable)</a></li>
+<li><a ="#">equiptools (Equips every tool in your inventory at once)</a></li>
+<li><a ="#">reach [num] (Increases the hitbox of your held tool)</a></li>
+<li><a ="#">unreach / noreach (Turns off reach)</a></li>
+<li><a ="#">grippos [X Y Z] (Changes your current tools grip position)</a></li>
+<li><a ="#">usetools [ammount] [delay] (Activates all tools in your backpack at the same time)</a></li>
+<li><a ="#">addalias [cmd] [alias] (Adds an alias to a command)</a></li>
+<li><a ="#">removealias [alias] (Removes a custom alias)</a></li>
+<li><a ="#">clraliases (Removes all custom aliases)</a></li>
+<li><a ="#">addplugin / plugin [name] (Add a plugin via command)</a></li>
+<li><a ="#">removeplugin / deleteplugin [name] (Remove a plugin via command)</a></li>
+<li><a ="#">reloadplugin [name] (Reloads a plugin)</a></li>
+<li><a ="#">breakloops / break (cmd loops) (Stops any cmd loops (;100^1^cmd))</a></li>
+<li><a ="#">removecmd / deletecmd (Removes a command until the admin is reloaded)</a></li>
+<li><a ="#">tpwalk / teleportwalk (Teleports you to your move direction)</a></li>
+<li><a ="#">untpwalk / unteleportwalk (Undoes tpwalk / teleportwalk)</a></li>
+</ul>
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+<script type="text/javascript">(function(){window['__CF$cv$params']={r:'64d50869adf7937c',m:'204f1d579bb5cb4123a6f547c64144644ae25593-1620669267-1800-AReHuc5aNmph/9eiWbJDdtPKVXqImsK1wM+zym5IrtKXb8SJB5+pwAEfV3mQ6MDyQ7t/OS12UgW9byTa9jjHYpfxvBm8VYqxLvjFnCtTqNh3pNTFxdOxnmVPj7dbXZdQPN+u/ZRJbtUqn3au068e450=',s:[0x00d4d97de4,0xdf68582058],}})();</script></body>
+</html>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<div class="yola_footer_wrap">
+<div class="yola_footer_column">
+<footer id="yola_style_footer">
+<p style="float:right; margin:0;"></p><div style="clear:both; height:0;"></div>
+</footer>
+</div>
+</div>
+</div>
+</div> 
+</div> 
+<script src="resources/build.js"></script>
+</body>
+</html>
