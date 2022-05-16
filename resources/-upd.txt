@@ -1,0 +1,7 @@
+<h4><strong style="color: #7a7979;">Title</strong></h4>
+
+<h5><span style="color: #859900;" class="hljs-addition">+ Added</span></h5>
+
+<h5><span style="color: #b9bbbe;">* Fixed</span></h5>
+
+<h5><span style="color: #d32a2a;">- Removed</span></h5>
