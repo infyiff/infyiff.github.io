@@ -1,0 +1,1 @@
+window.addEventListener("DOMContentLoaded",(async()=>{const t=markdownit({html:!0,linkify:!0,typographer:!0,highlight:function(t,e){if(e&&hljs.getLanguage(e))try{return hljs.highlight(t,{language:e}).value}catch(t){}return""}});fetch("main.md").then((t=>t.text())).then((e=>{document.getElementById("content").innerHTML=twemoji.parse(t.render(e))}))}));
