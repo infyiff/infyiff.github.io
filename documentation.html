@@ -1221,6 +1221,8 @@ a:hover, .sys_txt a:hover, .sys_layout a:hover {text-decoration: underline;}
   padding: 8px 10px 8px 10px;
   border: 1px solid #ddd;
   margin-bottom: 12px;
+  background-color: rgb(43, 43, 43);
+  color: rgb(255, 255, 255);
 }
 
 #myUL {
@@ -1232,22 +1234,23 @@ a:hover, .sys_txt a:hover, .sys_layout a:hover {text-decoration: underline;}
 #myUL li a {
   border: 1px solid #ddd;
   margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
+  background-color: rgb(43, 43, 43);
   padding: 12px;
   text-decoration: none;
   font-size: 18px;
-  color: black;
+  color: rgb(204, 204, 204);
   display: block
 }
 
 #myUL li a:hover:not(.header) {
-  background-color: #eee;
+  background-color: #3b3b3a;
 }
+
 </style>
 </head>
 <body>
 <h2 id="feCmds">Infinite Yield FE Commands</h2>
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for commands..." title="Start typing a command">
+<input type="text" id="myInput" autocomplete="off" onkeyup="myFunction()" placeholder="Search for commands..." title="Start typing a command">
 <ul id="myUL"></ul>
 <noscript>JavaScript is required to fetch command list from source</noscript>
 <script>
