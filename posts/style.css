@@ -1,0 +1,29 @@
+html {
+    font-family: sans-serif;
+    color: #bdc0c2;
+    background-color: #1c1c1c;
+    font-size: 1.3em;
+}
+
+.content {
+    max-width: 1000px;
+    width: calc(100% - 20px);
+    margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    color: #4b99d1;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+a:hover {
+    color: #74a8d3;
+    text-decoration: underline;
+}
+
+#article-content * {
+    max-width: 100%;
+}
