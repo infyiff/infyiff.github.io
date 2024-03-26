@@ -1,107 +1,107 @@
 # Bloodbath
 
-![bloodbath](https://media.discordapp.net/attachments/1142295195262652496/1142300970123010190/Screenshot_20230818_233416_Firefox_Nightly.jpg)
+![bloodbath](https://files.catbox.moe/ky3bhh.jpg)
 
 # Day 0
 
-![day 0](https://media.discordapp.net/attachments/1142295195262652496/1142301021113159780/Screenshot_20230818_233521_Firefox_Nightly.jpg)
+![day 0](https://files.catbox.moe/azlrfu.jpg)
 
-![day 0](https://media.discordapp.net/attachments/1142295195262652496/1142301021381603348/Screenshot_20230818_233540_Firefox_Nightly.jpg)
+![day 0](https://files.catbox.moe/ltbd7m.jpg)
 
-![day 0](https://media.discordapp.net/attachments/1142295195262652496/1142301021612277760/Screenshot_20230818_233552_Firefox_Nightly.jpg)
+![day 0](https://files.catbox.moe/vc3mf8.jpg)
 
 # Day 1
 
-![day 1](https://media.discordapp.net/attachments/1142295195262652496/1142301842487902208/Screenshot_20230818_233701_Firefox_Nightly.jpg)
+![day 1](https://files.catbox.moe/b3z4ff.jpg)
 
-![day 1](https://media.discordapp.net/attachments/1142295195262652496/1142301842731184219/Screenshot_20230818_233743_Firefox_Nightly.jpg)
+![day 1](https://files.catbox.moe/dimnw8.jpg)
 
 ### Fallen Tributes 1
 
-![fallen tributes](https://media.discordapp.net/attachments/1142295195262652496/1142301909806481549/Screenshot_20230818_233803_Firefox_Nightly.jpg)
+![fallen tributes](https://files.catbox.moe/e1e8nt.jpg)
 
 # Night 1
 
-![night 1](https://media.discordapp.net/attachments/1142295195262652496/1142302388133302352/Screenshot_20230818_234112_Firefox_Nightly.jpg)
+![night 1](https://files.catbox.moe/uzhdyl.jpg)
 
-![night 1](https://media.discordapp.net/attachments/1142295195262652496/1142302388452085781/Screenshot_20230818_234136_Firefox_Nightly.jpg)
+![night 1](https://files.catbox.moe/2o992m.jpg)
 
 # Day 2
 
-![day 2](https://media.discordapp.net/attachments/1142295195262652496/1142302722784247828/Screenshot_20230818_234216_Firefox_Nightly.jpg)
+![day 2](https://files.catbox.moe/f1m5mk.jpg)
 
-![day 2](https://media.discordapp.net/attachments/1142295195262652496/1142302723035889754/Screenshot_20230818_234231_Firefox_Nightly.jpg)
+![day 2](https://files.catbox.moe/fkqkk3.jpg)
 
 ### Fallen Tributes 2
 
-![fallen tributes](https://media.discordapp.net/attachments/1142295195262652496/1142302747853594684/Screenshot_20230818_234255_Firefox_Nightly.jpg)
+![fallen tributes](https://files.catbox.moe/81l23y.jpg)
 
 # Night 2
 
-![night 2](https://media.discordapp.net/attachments/1142295195262652496/1142303580913684520/Screenshot_20230818_234630_Firefox_Nightly.jpg)
+![night 2](https://files.catbox.moe/qzoals.jpg)
 
 # Day 3
 
-![day 3](https://media.discordapp.net/attachments/1142295195262652496/1142303830118248528/Screenshot_20230818_234724_Firefox_Nightly.jpg)
+![day 3](https://files.catbox.moe/zosgvi.jpg)
 
 ### Fallen Tributes 3
 
-![fallen tributes](https://media.discordapp.net/attachments/1142295195262652496/1142303924167135232/Screenshot_20230818_234750_Firefox_Nightly.jpg)
+![fallen tributes](https://files.catbox.moe/hb8gjy.jpg)
 
 # Night 3
 
-![night 3](https://media.discordapp.net/attachments/1142295195262652496/1142304049350332466/Screenshot_20230818_234821_Firefox_Nightly.jpg)
+![night 3](https://files.catbox.moe/u1qc9w.jpg)
 
 # Day 4
 
-![day 4](https://media.discordapp.net/attachments/1142295195262652496/1142304180149694504/Screenshot_20230818_234850_Firefox_Nightly.jpg)
+![day 4](https://files.catbox.moe/ast579.jpg)
 
 ### Fallen Tributes 4
 
-![fallen tributes](https://media.discordapp.net/attachments/1142295195262652496/1142304274257289277/Screenshot_20230818_234915_Firefox_Nightly.jpg)
+![fallen tributes](https://files.catbox.moe/7hygra.jpg)
 
 # Night 4
 
-![night 4](https://media.discordapp.net/attachments/1142295195262652496/1142304389260906556/Screenshot_20230818_234943_Firefox_Nightly.jpg)
+![night 4](https://files.catbox.moe/6u8p6y.jpg)
 
 # The Feast
 
-![the feast](https://media.discordapp.net/attachments/1142295195262652496/1142304514985185340/Screenshot_20230818_235012_Firefox_Nightly.jpg)
+![the feast](https://files.catbox.moe/b6ngb2.jpg)
 
 # Day 5
 
-![day 5](https://media.discordapp.net/attachments/1142295195262652496/1142304596589551667/Screenshot_20230818_235033_Firefox_Nightly.jpg)
+![day 5](https://files.catbox.moe/i09lf2.jpg)
 
 ### Fallen Tributes 5
 
-![fallen tributes](https://media.discordapp.net/attachments/1142295195262652496/1142304692924338236/Screenshot_20230818_235054_Firefox_Nightly.jpg)
+![fallen tributes](https://files.catbox.moe/5haojm.jpg)
 
 # Night 5
 
-![night 5](https://media.discordapp.net/attachments/1142295195262652496/1142304783508709417/Screenshot_20230818_235116_Firefox_Nightly.jpg)
+![night 5](https://files.catbox.moe/ihkr5g.jpg)
 
 # Day 6
 
-![day 6](https://media.discordapp.net/attachments/1142295195262652496/1142304885564514324/Screenshot_20230818_235142_Firefox_Nightly.jpg)
+![day 6](https://files.catbox.moe/pdftdv.jpg)
 
 ### Fallen Tributes 6
 
-![fallen tributes](https://media.discordapp.net/attachments/1142295195262652496/1142304985862909972/Screenshot_20230818_235204_Firefox_Nightly.jpg)
+![fallen tributes](https://files.catbox.moe/1hrmuz.jpg)
 
 # The Winner
 
-![the winner](https://media.discordapp.net/attachments/1142295195262652496/1142305057958789150/Screenshot_20230818_235222_Firefox_Nightly.jpg)
+![the winner](https://files.catbox.moe/vt76s1.jpg)
 
 ### Bonuses
 
 ## Placements
 
-![placements](https://media.discordapp.net/attachments/1142295195262652496/1142305293024362626/Screenshot_20230818_235317_Firefox_Nightly.jpg)
+![placements](https://files.catbox.moe/bqvdrg.jpg)
 
 ## Summary
 
-![summary](https://media.discordapp.net/attachments/1142295195262652496/1142305421378469918/Screenshot_20230818_235349_Firefox_Nightly.jpg)
+![summary](https://files.catbox.moe/hcq4a7.jpg)
 
 ## Statistics
 
-![statistics](https://media.discordapp.net/attachments/1142295195262652496/1142305531147587744/Screenshot_20230818_235413_Firefox_Nightly.jpg)
+![statistics](https://files.catbox.moe/w9cd74.jpg)
